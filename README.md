@@ -1,75 +1,40 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+--Korean
+Github 연결을 위한 Project 예문
+-OS : Window
+-Terminal : PowerShell
+-IDE : VS Code(Visual Studio Code)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Github는 버전관리를 위해 사용되며, 이는 대부분의 프로젝트에서 사용되고 있다.
+Github에서는 개인 컴퓨터에서 원격 저장소를 통해 프로젝트를 유통시키고, 협업을 위한 버전관리를 제공해준다.
+Github 연결을 위해 Git을 다운로드 할 필요가 있다.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Practice1_github_upload
-developer's practice 1 github upload
->>>>>>> e1accea00f19064b3ad941c323c9c2d2e38afc14
+1. Git다운로드 및 설치
+http://gitforwindows.org
+위 사이트에서 git을 다운로드 받을 수 있다.
+맥OS를 사용하는 경우에는 같은 사이트에서 Mac OS용을 다운로드 받을 수 있다.
+2. Git설치 확인
+설치를 확인하는 방법은 cmd창(Window + R)을 열고 아래의 커맨드를 입력해준다.
+git version
+예상 되는 결과값 : git version 2.25.1.windows.1 
+3. VS Code
+왼쪽 메뉴바의 소스제어에서 리푀토리를 초기화시켜준다.
+이를 통해 폴더 내부에 .git폴더가 생성되고, 이곳이 로컬 저장소가 된다.(숨긴항목이 때문에 체크해서 보이게 처리해야한다.)
+4. Git설정
+처음 시작하는 경우에는 git을 config하는 과정이 필요하다.
+아래의 커맨드를 입력하여 계정에 대한 정보를 설정한다.
+git config --global user.name "유저명"
+git config --global user.email "유저이메일"
+5. 새로운 파일 생성
+VS Code의 문서관리에서 여러가지 파일들을 생성한다.
+이때, 파일명 옆에 U가 붙어있는데, 이는 github에 업로드 되어있지 않은 상태를 의미한다.
+6. 파일 스테이지에 올리기
+파일명 옆 U가 있는 쪽에 마우스 커서를 이동하면, +버튼이 보이는데, 이것을 클릭하면, 파일이 스테이징 되면서 옆 글자가 U에서 A로 변경된다.
+이것이 인덱스에 추가된 것으로 위의 커밋 버튼을 누르면 커밋이 된다.
+※반드시 Commit을 할 때는 Commit메세지를 작성해야하고, 이를 작성하지 않으면 Commit이 되지 않을 수 있다.
+7. 원격 저장소 연결하기
+아래의 커맨드를 입력하여 Git리모트를 설정한다.
+git remote add origin https://github.com/유저명/프로젝트명.git
+8. Github로 Push하기
+VS Code의 소스제어에서 ...아이콘을 눌러 Push를 누르면, github로 Push되는 것을 확인할 수 있다.
+9. Github에서 확인하기
+Github에서 Push된 것을 확인한다.
